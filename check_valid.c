@@ -6,7 +6,7 @@
 /*   By: sonkang <sonkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 14:58:39 by sonkang           #+#    #+#             */
-/*   Updated: 2021/08/17 23:45:52 by sonkang          ###   ########.fr       */
+/*   Updated: 2021/08/23 00:26:28 by sonkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ int	check_map_valid(t_map *m_info)
 void	get_player_position(int *count, t_map *map, int row, int col)
 {
 	*count += 1;
-	map->player_x = col;
-	map->player_y = row;
+	map->player_x = row;
+	map->player_y = col;
 }
 
 void	get_collect_ea(int	*count, t_map *map)

@@ -6,7 +6,7 @@
 /*   By: sonkang <sonkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 10:58:24 by sonkang           #+#    #+#             */
-/*   Updated: 2021/08/22 22:25:52 by sonkang          ###   ########.fr       */
+/*   Updated: 2021/08/23 00:53:47 by sonkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void	show_win(t_info *info)
 	if (!(win_x >= 64 * info->map.col && win_y >= \
 		64 * info->map.row))
 		print_error(6);
-	info->win.mlx_win = mlx_new_window(info->win.mlx, 64 * info->map.row, \
-	64 * info->map.col, "Bubble Bobble");
-	info->fimg.img = mlx_new_image(info->win.mlx, 64 * info->map.row, \
-	64 * info->map.col);
+	info->win.mlx_win = mlx_new_window(info->win.mlx, 64 * info->map.col, \
+	64 * info->map.row, "Bubble Bobble");
+	info->fimg.img = mlx_new_image(info->win.mlx, 64 * info->map.col, \
+	64 * info->map.row);
 	info->fimg.addr = (unsigned int *)mlx_get_data_addr(info->fimg.img, \
 	&info->fimg.bits_per_pixel, &info->fimg.line_length, &info->fimg.endian);
 	get_texture(info);

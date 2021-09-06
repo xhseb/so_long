@@ -6,7 +6,7 @@
 /*   By: sonkang <sonkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 10:58:24 by sonkang           #+#    #+#             */
-/*   Updated: 2021/08/19 00:06:25 by sonkang          ###   ########.fr       */
+/*   Updated: 2021/08/23 00:31:29 by sonkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	show_win(t_info *info)
 
 	info->win.mlx = mlx_init();
 	mlx_get_screen_size(info->win.mlx, &win_x, &win_y);
-	if (!(win_x >= 64 * info->map.col && win_y >= \
-		64 * info->map.row))
+	if (win_x < 64 * info->map.col || win_y < \
+		64 * info->map.row)
 		print_error(6);
 	info->win.mlx_win = mlx_new_window(info->win.mlx, 64 * info->map.col, \
 	64 * info->map.row, "Bubble Bobble");
